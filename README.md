@@ -7,6 +7,7 @@
 0. html: pug 模板引擎
 1. css: stylus 预处理器
 2. javascript
+3. UI: vue-beauty 
 ```
 
 ### 安装依赖
