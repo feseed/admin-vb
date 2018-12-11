@@ -78,7 +78,7 @@ const routes = [
 		name: 'NotFound',
 		hidden: true,
 		component: () => import('@/pages/NotFound'),
-	},
+	}
 ]
 
 export { routes }
