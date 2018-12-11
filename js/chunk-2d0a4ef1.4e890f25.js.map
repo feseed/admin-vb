@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/locales/en.js"],"names":["__webpack_require__","r","__webpack_exports__","base","test"],"mappings":"kHAAAA,EAAAC,EAAAC,GAAeA,EAAA,YACdC,KAAM,CACLC,KAAM","file":"js/chunk-2d0a4ef1.4e890f25.js","sourcesContent":["export default {\n\tbase: {\n\t\ttest: 'test',\n\t},\n}\n"],"sourceRoot":""}
