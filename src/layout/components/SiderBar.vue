@@ -85,6 +85,11 @@ export default {
 	line-height: 60px !important;
 	background-color: #333a4e;
 }
+
+.layout__sider-bar .ant-menu-inline .ant-menu-item.ant-menu-item-selected {
+	background-color: #108ee9;
+}
+
 .layout__sider-bar .ant-menu-inline .ant-menu-submenu-inline.ant-menu-submenu-open > .ant-menu-submenu-title
 {
 	border-left: 3px solid #4a90e2;
