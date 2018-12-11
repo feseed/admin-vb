@@ -1,4 +1,4 @@
-## pos-seed
+## admin-seed
 
 > 基于 vue 2.x、vue-cli 3.x
 
