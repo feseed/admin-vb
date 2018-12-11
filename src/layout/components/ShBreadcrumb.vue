@@ -13,7 +13,7 @@ export default {
 		breadcrumbList: {
 			type: Array,
 			default: () => {},
-		}
+		},
 	},
 }
 </script>
@@ -28,5 +28,3 @@ export default {
 	text-align: left;
 }
 </style>
-
-

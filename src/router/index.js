@@ -11,7 +11,7 @@ const routes = [
 		name: 'nav-1',
 		meta: {
 			title: 'nav-1',
-			icon:'tag',
+			icon: 'tag',
 		},
 		component: Layout,
 		children: [
@@ -50,7 +50,7 @@ const routes = [
 		name: 'nav-2',
 		meta: {
 			title: 'nav-2',
-			icon:'paper-clip',
+			icon: 'paper-clip',
 		},
 		component: Layout,
 		children: [
@@ -78,7 +78,7 @@ const routes = [
 		name: 'NotFound',
 		hidden: true,
 		component: () => import('@/pages/NotFound'),
-	}
+	},
 ]
 
 export { routes }

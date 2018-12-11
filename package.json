@@ -48,7 +48,8 @@
       ]
     },
     "ignore": [
-      "output.js"
+      "output.js",
+      "public/third/**/*.js"
     ]
   }
 }

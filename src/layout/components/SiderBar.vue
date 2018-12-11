@@ -22,7 +22,7 @@ export default {
 			type: String,
 		},
 	},
-	data() {
+	data () {
 		return {
 			sideMenuRoutes: [],
 		}
@@ -40,7 +40,6 @@ export default {
 		generateSideRoutes () {
 			let parseSideRoutes = (routeList, currentPath = '') => {
 				return routeList.filter(item => !item.hidden).map(route => {
-
 					route.href = `${currentPath}${currentPath ? '/' : ''}${route.path}`
 					let isExpand = this.$route.matched[0].path === route.href
 					let isSelected = this.$route.fullPath === route.href
