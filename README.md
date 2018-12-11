@@ -10,6 +10,9 @@
 3. UI: vue-beauty 
 ```
 
+### 在线预览
+[传送门](https://feseed.github.io/admin-vb/)
+
 ### 安装依赖
 ```
 yarn install  # 必须使用
