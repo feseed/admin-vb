@@ -7,7 +7,7 @@
 <style>
 .layout__main-content {
 	width: 100%;
-	height: calc(100vh - 60px);
+	height: calc(100vh - 100px);
 	background-color: #f5f8fa;
 }
 </style>
