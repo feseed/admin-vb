@@ -56,7 +56,7 @@ export default {
 				})
 			}
 			this.sideMenuRoutes = parseSideRoutes(routes)
-			console.log('this.sideMenuRoutes: ', this.sideMenuRoutes)
+			// console.log('this.sideMenuRoutes: ', this.sideMenuRoutes)
 		},
 	},
 }

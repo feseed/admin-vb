@@ -650,6 +650,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@gauseen/tools@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@gauseen/tools/-/tools-0.0.2.tgz#7916c2bf52aa816c398271951a940def88208877"
+  integrity sha512-p10ZPmvDd51Gck1isIaPcE+Lgn59+IJd2dQTqsGNB7HbG8szP4JihHCxPKAmOJ3k793DEPPwwJKFw6wBHP0T6A==
+
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "http://registry.npm.taobao.org/@intervolga/optimize-cssnano-plugin/download/@intervolga/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import { setTitle, storage } from '@/utils'
+import { storage } from '@gauseen/tools'
 import langCN from '@/locales/cn'
 
 Vue.use(VueI18n)
@@ -17,7 +17,7 @@ const loadedLanguages = ['cn']
 
 function setI18nLanguage (lang, to) {
 	i18n.locale = lang
-	storage().set('pos_language', lang)
+	storage().set('admin_language', lang)
 	document.querySelector('html').setAttribute('lang', lang)
 	return lang
 }

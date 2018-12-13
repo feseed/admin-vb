@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { notification } from 'mint-ui'
-import { storage } from '@/utils'
+import { storage } from '@gauseen/tools'
 
 const api = process.env.VUE_APP_BASE_API
 
@@ -13,7 +13,7 @@ export const post = (url, data, options) => {
 }
 
 export const common = (type, url, data, options = {}) => {
-	const lang = storage().get('pos_language') === 'en' ? 'en' : 'zh-CN'
+	const lang = storage().get('admin_language') === 'en' ? 'en' : 'zh-CN'
 	const config = {
 		method: type,
 		url: `${api}${url}`,

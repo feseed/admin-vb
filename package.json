@@ -11,6 +11,7 @@
     "gh:preview": "gh-pages -d dist"
   },
   "dependencies": {
+    "@gauseen/tools": "^0.0.2",
     "axios": "^0.18.0",
     "number-precision": "^1.2.0",
     "vue": "^2.5.17",

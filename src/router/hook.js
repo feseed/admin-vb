@@ -1,13 +1,13 @@
 import router from './index'
 import { loadLanguageAsync } from '@/plugins/i18n'
-import { storage } from '@/utils'
+import { storage } from '@gauseen/tools'
 
 // 本地存储当前语言
 const getCurrentLang = () => {
-	let language = storage().get('pos_language')
+	let language = storage().get('admin_language')
 	if (!language) {
 		language = 'cn'
-		storage().set('pos_language', language)
+		storage().set('admin_language', language)
 	}
 	return language
 }
