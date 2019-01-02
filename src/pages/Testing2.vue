@@ -18,9 +18,6 @@ export default {
 			return this.$store.state.todo.count
 		},
 	},
-	mounted () {
-		// console.log('testing: ', this.$store)
-	},
 	methods: {
 		add () {
 			this.$store.commit('increment')
@@ -28,6 +25,9 @@ export default {
 		addTodo () {
 			this.$store.commit('updateTodo')
 		},
+	},
+	mounted () {
+		// console.log('testing: ', this.$store)
 	},
 }
 </script>

@@ -1,10 +1,10 @@
 import {
-	update_collapse,
+	UPDATE_COLLAPSE,
 
 } from '@/store/mutation-types'
 
 export default {
-	[update_collapse] (state) {
+	[UPDATE_COLLAPSE] (state) {
 		state.collapsed = !state.collapsed
 	},
 	increment (state) {

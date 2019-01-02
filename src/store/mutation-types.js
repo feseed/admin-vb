@@ -1,1 +1,1 @@
-export const update_collapse = 'update_collapse'
+export const UPDATE_COLLAPSE = 'UPDATE_COLLAPSE'
