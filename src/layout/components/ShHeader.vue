@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { update_collapse } from '@/store/mutation-types'
+import { UPDATE_COLLAPSE } from '@/store/mutation-types'
 
 export default {
 	name: 'ShHeader',
@@ -18,7 +18,7 @@ export default {
 	},
 	methods: {
 		handlerToggle () {
-			this.$store.commit(update_collapse)
+			this.$store.commit(UPDATE_COLLAPSE)
 		},
 	},
 }
