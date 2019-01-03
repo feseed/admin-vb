@@ -14,6 +14,7 @@ export const post = (url, data, options) => {
 
 export const common = (type, url, data, options = {}) => {
 	const lang = storage().get('admin_language') === 'en' ? 'en' : 'zh-CN'
+	const token = storage().get('admin_token')
 	const config = {
 		method: type,
 		url: `${api}${url}`,
@@ -21,6 +22,7 @@ export const common = (type, url, data, options = {}) => {
 		dataType: 'json',
 		timeout: options.timeout,
 		headers: {
+			'x-token': token,
 			'accept-language': lang,
 			'content-type': 'application/json;charset=utf-8',
 		},
