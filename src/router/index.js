@@ -1,71 +1,36 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Layout from '@/layout/Layout'
-
 Vue.use(Router)
 
-const routes = [
-	{
-		path: '/one',
-		name: 'nav-1',
-		meta: {
-			title: 'nav-1',
-			icon: 'tag',
-		},
-		component: Layout,
-		children: [
-			{
-				path: 'a',
-				name: 'a',
-				meta: {
-					title: '1-1',
-					icon: 'dot-chart',
-				},
-				component: () => import('@/pages/Testing'),
-			},
-			{
-				path: 'b',
-				name: 'b',
-				meta: {
-					title: '1-2',
-					icon: 'pie-chart',
-				},
-				component: () => import('@/pages/Testing2'),
-			},
-			{
-				path: 'c',
-				name: 'c',
-				meta: {
-					title: '1-3',
-					icon: 'link',
-				},
-				hidden: true,
-				component: () => import('@/pages/Testing'),
-			},
-		],
-	},
-	{
-		path: '/two',
-		name: 'nav-2',
-		meta: {
-			title: 'nav-2',
-			icon: 'paper-clip',
-		},
-		component: Layout,
-		children: [
-			{
-				path: 'aa',
-				name: 'bb',
-				meta: {
-					title: '2-1',
-					icon: 'link',
-				},
-				component: () => import('@/pages/Testing'),
-			},
-		],
-	},
+/**
+ * 后端返回的路由规则示例：
+ *
+ * {
+ *	path: '/someParent',            // 父级路径以 / 开头
+ *	name: 'nav-2',                  // 父级路由名称
+ *	hidden: true,                   // 父级路由不在侧边导航栏显示
+ *	meta: {
+ *		title: 'nav-2',               // 父级路由 title，用于面包屑，侧边导航栏显示
+ *		icon: 'paper-clip',           // 父级路由侧边导航栏 icon 图标
+ *	},
+ *	children: [
+ *		{
+ *			path: 'aa',                 // 子级路径不要以 / 开头
+ *			name: 'bb',                 // 子级路由名称
+ *			hidden: true,               // 子级路由不在侧边导航栏显示
+ *			meta: {
+ *				title: '2-1',             // 子级路由 title，用于面包屑，侧边导航栏显示
+ *				icon: 'link',             // 子级路由侧边导航栏 icon 图标
+ *			},
+ *			componentPath: 'Testing',   // 子级路由对应的页面地址 (此地址表示: `@/pages/Testing.vue`)
+ *		},
+ *	],
+ *}
+ */
 
+// 无权需权限验证，通用路由
+export const commonRoutes = [
 	// redirect route
 	{
 		path: '/',
@@ -81,10 +46,9 @@ const routes = [
 	},
 ]
 
-export { routes }
-
 export default new Router({
 	mode: 'history',
 	base: process.env.BASE_URL,
-	routes,
+	scrollBehavior: () => ({ y: 0 }),
+	routes: [...commonRoutes],
 })

@@ -10,6 +10,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 	state: {
 		stateRoot: 'root',
+		dynamicRoutes: [],
 		collapsed: false,
 		count: 0,
 	},

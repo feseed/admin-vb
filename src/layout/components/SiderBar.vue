@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { routes } from '@/router/index'
+import { commonRoutes } from '@/router/index'
 
 export default {
 	name: 'SiderBar',
@@ -30,6 +30,10 @@ export default {
 	computed: {
 		collapsed () {
 			return this.$store.state.collapsed
+		},
+		// 权限动态路由
+		dynamicRoutes () {
+			return this.$store.state.dynamicRoutes
 		},
 	},
 	mounted () {
@@ -55,7 +59,7 @@ export default {
 					return data
 				})
 			}
-			this.sideMenuRoutes = parseSideRoutes(routes)
+			this.sideMenuRoutes = parseSideRoutes([...this.dynamicRoutes, ...commonRoutes])
 			// console.log('this.sideMenuRoutes: ', this.sideMenuRoutes)
 		},
 	},
