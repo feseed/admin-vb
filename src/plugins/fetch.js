@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { notification } from 'mint-ui'
+import { notification } from 'vue-beauty'
 import { storage } from '@gauseen/tools'
 
 const api = process.env.VUE_APP_BASE_API
@@ -17,7 +17,7 @@ export const common = (type, url, data, options = {}) => {
 	const token = storage().get('admin_token')
 	const config = {
 		method: type,
-		url: `${api}${url}`,
+		url: `${api}/${url}`,
 		data: data,
 		dataType: 'json',
 		timeout: options.timeout,

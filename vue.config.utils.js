@@ -1,15 +1,23 @@
 const path = require('path')
+const baseApi = process.env.VUE_APP_BASE_API
+const mockProjectId = process.env.VUE_APP_MOCK_PROJECT_ID
 
 module.exports = {
 	resolve (dir) {
 		return path.join(__dirname, dir)
 	},
 	proxyTable: {
-		'/mdm2': {
-			target: process.env.VUE_APP_DOMAIN || 'http://preview-hgpos.behuntergatherer.com', // uat 上海测试
+		// 开发环境代理
+		[`${baseApi}/(?!mock)`]: {
+			target: process.env.VUE_APP_DOMAIN || 'http://preview-hgpos.behuntergatherer.com', // 测试环境
+			changeOrigin: true,
+		},
+		// mock 数据代理
+		[`${baseApi}/mock`]: {
+			target: 'https://easy-mock.com',
 			changeOrigin: true,
 			pathRewrite: {
-				'^/mdm2': '/mdm2',
+				[`${baseApi}/mock`]: `/mock/${mockProjectId}${baseApi}`,
 			},
 		},
 	},
