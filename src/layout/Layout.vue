@@ -18,6 +18,13 @@ import MainContent from './MainContent'
 export default {
 	name: 'Layout',
 
+	computed: {
+		// 获取当前路由层级
+		currentPathLevel () {
+			return this.generatePathLevel(this.$route)
+		},
+	},
+
 	components: {
 		SiderBar,
 		ShHeader,
@@ -25,12 +32,6 @@ export default {
 		MainContent,
 	},
 
-	computed: {
-		// 获取当前路由层级
-		currentPathLevel () {
-			return this.generatePathLevel(this.$route)
-		},
-	},
 	methods: {
 		// 生成当前路由层级
 		generatePathLevel (toRoute) {
